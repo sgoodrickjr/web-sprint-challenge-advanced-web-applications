@@ -28,9 +28,23 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain what a token is used for.
+
+A: A token is used to authenticate someone. It is like a ticket to an event. Symbolically, it can be a keyword, operator, or punctuation mark. It's kind of like the secret messages people used to use at speak-easies back in the 1920's to get access to illegal booze. 
+
 2. What steps can you take in your web apps to keep your data secure?
+
+A: Use encryption tools like jwt and tokens to keep your data safe.
+
 3. Describe how web servers work.
+
+A: Web servers can be described by the process of ordering a beer from a restaurant. The authentication server is similar to a waiter. You make a request to them to bring you a beer. They in turn request that you show them your ID. Once processed that you are who you say you are, the waiter will give you your ID back having verified it. Then he will go to the back, tell the bartender, who acts as the resources server, and get a beer to bring back to you.
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+Create - Post
+Read - Get
+Update - Put
+Delete - Delete
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
