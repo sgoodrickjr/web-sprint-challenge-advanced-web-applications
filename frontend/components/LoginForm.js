@@ -46,7 +46,7 @@ export default function LoginForm(props) {
         id="password"
         type="password"
       />
-      <button disabled={isDisabled()} id="submitCredentials">
+      <button disabled={isDisabled()} id="submitCredentials" aria-label="Submit credentials">
         Submit credentials
       </button>
     </form>

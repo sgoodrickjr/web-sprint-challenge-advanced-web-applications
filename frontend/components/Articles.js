@@ -20,27 +20,32 @@ export default function Articles(props) {
     // ✨ fix the JSX: replace `Function.prototype` with actual functions
     // and use the articles prop to generate articles
     <div className="articles">
-      <h2>Articles</h2>
-      {
-        articles.length === 0
-          ? 'No articles yet'
-          : articles.map(art => {
-            return (
-              <div className={`article${art.article_id === currentArticleId ? ' active' : ''}`} key={art.article_id}>
-                <div>
-                  <h3>{art.title}</h3>
-                  <p>{art.text}</p>
-                  <p>Topic: {art.topic}</p>
-                </div>
-                <div>
-                <button onClick={() => setCurrentArticleId(art.article_id)}>Edit</button>
-                <button onClick={() => deleteArticle(art.article_id)}>Delete</button>
-                </div>
-              </div>
-            )
-          })
-      }
-    </div>
+    <h2>Articles</h2>
+    {articles.length === 0
+      ? 'No articles yet'
+      : articles.map((art) => (
+          <div
+            key={art.article_id}
+            className={`article ${
+              currentArticleId === art.article_id ? 'active' : ''
+            }`}
+          >
+            <div>
+              <h3>{art.title}</h3>
+              <p data-testid={`article-text-${art.article_id}`}>{art.text}</p>
+              <p>Topic: {art.topic}</p>
+            </div>
+            <div>
+              <button onClick={() => setCurrentArticleId(art.article_id)}>
+                Edit
+              </button>
+              <button onClick={() => deleteArticle(art.article_id)}>
+                Delete
+              </button>
+            </div>
+          </div>
+        ))}
+  </div>
   )
 }
 
